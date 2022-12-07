@@ -1,0 +1,204 @@
+.title{
+    text-align: center;
+    width: 100%;
+    float:left; 
+    padding-bottom: 50px;   
+}
+
+input,textarea{
+    width: 100%;
+    margin-bottom: 30px;
+    padding-left: 0px;
+    border: solid 1px #FDF5EB;
+    border-bottom: 2px solid #d9d9d9;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    background: #FDF5EB;
+}
+
+input.error,textarea.error{
+    border: solid 3px red;
+}
+textarea{
+    height: 100px;
+}
+
+input:focus,textarea:focus{
+    border: none;
+    outline: none;
+}
+button{
+    width: 70%;
+    background-color:#D36B00;
+    border-radius:8px;
+    border:none;
+}
+
+.error_field{
+    color:red;
+}
+#wrap{
+    width:  100%;
+    padding: 3rem;
+    background: #FDF5EB;
+    box-shadow: 0px 0px 20px 0px #e0e0e0;
+    padding-top: 0px;
+    margin-top: 60px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.navbar.navbar-expand-lg{
+    background-color:black;
+}
+.center{
+    text-align: center;
+    padding-bottom: 100px;
+    margin-bottom: 15px;
+}
+@keyframes effect_border {
+    from {width:0%;}
+    to {width:100%;}
+}
+
+.effect_focus{
+    width:100%;
+    background-color: #d9d9d9;
+    height: 2px;
+    display:inline-block;
+    margin-bottom: 30px;
+}
+
+.effect_focus .point{
+    background-color:#D36B00;
+    width:0px;
+    height: 2px;
+}
+
+.effect_focus .point.focus{
+    animation: effect_border 0.5s forwards;
+}
+
+.effect_focus .point.unfocus{
+    animation: effect_border 0.5s reverse;
+}
+lable{
+    float:left;
+    padding-left: 0px;
+}
+
+.submit_contact{
+    width: 280px;
+    background-color:#EAA636;
+    float: none;
+    display: inline-flex;
+    border-radius: 20px;
+}
+
+#import{
+    float:right;
+}
+
+lable,.center,h3{
+    color: #D36B00;
+}
+
+h1{
+    padding-top: 30px;
+    color: #D36B00;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.centered{
+    padding-bottom: 30px;
+}
+h3{
+    padding-top: 30spx;
+}
+
+.chat-toggle{
+    background-color: red;
+}
+
+.contact{
+    padding-top: 8rem;
+    padding-bottom: 7rem;
+}
+
+iframe{
+    height: 100%;
+    width: 577px;
+}
+
+.open-button {
+    background-color: #EAA636;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.8;
+    position: fixed;
+    bottom: 23px;
+    right: 37px;
+    width: 117px;
+    margin-right: 62px;
+    border-radius: 30px;
+  }
+  
+  /* The popup chat - hidden by default */
+  .chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+  }
+  
+  /* Add styles to the form container */
+  .form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+  }
+  
+  /* Full-width textarea */
+  .form-container textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    resize: none;
+    min-height: 200px;
+  }
+  
+  /* When the textarea gets focus, do something */
+  .form-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for the submit/send button */
+  .form-container .btn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+

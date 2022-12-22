@@ -1,15 +1,6 @@
 (function ($) {
     "use strict";
 
-    // Spinner
-    var spinner = function () {
-        setTimeout(function () {
-            if ($('#spinner').length > 0) {
-                $('#spinner').removeClass('show');
-            }
-        }, 1);
-    };
-    spinner();
 
 
     // Initiate the wowjs
@@ -17,15 +8,25 @@
 
 
     // Fixed Navbar
-    $('.fixed-top').css('top', $('.top-bar').height());
+    $('.fixed-top').css('top', $('.navbar').height());
     $(window).scroll(function () {
-        if ($(this).scrollTop()) {
+        if ($(this).scrollTop() > $('.navbar').height()) {
             $('.fixed-top').addClass('bg-dark').css('top', 0);
         } else {
-            $('.fixed-top').removeClass('bg-dark').css('top', $('.top-bar').height());
+            $('.fixed-top').removeClass('bg-dark').css('top', $('.navbar').height());
         }
     });
 
+
+    // Fixed Navbar
+    $('.fixed-sale').css('top', $('.top-bar').height());
+    $(window).scroll(function () {
+        if ($(this).scrollTop()) {
+            $('.fixed-sale').addClass('bg-dark').css('top', 0);
+        } else {
+            $('.fixed-sale').removeClass('bg-dark').css('top', $('.top-bar').height());
+        }
+    });
 
 
     // Back to top button
@@ -73,7 +74,7 @@
 
     // Testimonials carousel
     // use loop, basic, responsive,
-    $(".testimonial-carousel").owlCarousel({
+    $(".product-carousel").owlCarousel({
         autoplay: false,
         smartSpeed: 1000,
         margin: 25,
@@ -134,43 +135,35 @@
 //     count(item)
 // })
 
-function countTo(){
-    let from = 71;
-    let to = 2500;
-    // let step = to > from ? 3 : -1;
-    let step = 3;
-    let interval = 1500;
-
-    if(from == to){
-        document.querySelector(".number").textContent = from;
-        return;
-    }
-
-    let counter = setInterval(function(){
-        from += step;
-        document.querySelector(".number").textContent = from;
-
-        if(from == to){
-            clearInterval(counter);
-        }
-    }, interval);
-}
-
-countTo();
 
 //-- Rating start ------
 const btn = document.querySelector("button");
-      const post = document.querySelector(".post");
-      const widget = document.querySelector(".star-widget");
-      const editBtn = document.querySelector(".edit");
-      btn.onclick = ()=>{
-        widget.style.display = "none";
-        post.style.display = "block";
-        editBtn.onclick = ()=>{
-          widget.style.display = "block";
-          post.style.display = "none";
-        }
-        return false;
-      }
+const post = document.querySelector(".post");
+const widget = document.querySelector(".star-widget");
+const editBtn = document.querySelector(".edit");
+btn.onclick = () => {
+    widget.style.display = "none";
+    post.style.display = "block";
+    editBtn.onclick = () => {
+        widget.style.display = "block";
+        post.style.display = "none";
+    }
+    return false;
+}
 // -- END rating -------
+
+//----Search -----
+const icon = document.querySelector('.icon');
+const search = document.querySelector('.search');
+icon.onclick= function(){
+    search.classList.toggle('active')
+}
+//----END search -----
+
+
+
+
+
+
+
 

@@ -35,7 +35,7 @@ window.onload = function () {
         }
 
         // HIển thị chuỗi thời gian trong thẻ p
-        time.textContent = hours + ": " + minutes + ": " + seconds;
+        time.textContent = hours + " : " + minutes + " : " + seconds;
 
         // Nếu thời gian kết thúc, hiển thị chuỗi thông báo
         if (distance < 0) {

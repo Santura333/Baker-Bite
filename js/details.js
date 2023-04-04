@@ -27,7 +27,7 @@ window.onload = function()
 {
     //-reverse clock
  // Thiết lập thời gian đích mà ta sẽ đếm
- var countDownDate = new Date("Dec 30, 2022 15:37:25").getTime();
+ var countDownDate = new Date("Dec 5, 2022 15:37:25").getTime();
 
  // cập nhập thời gian sau mỗi 1 giây
  var x = setInterval(function () {
@@ -60,7 +60,7 @@ window.onload = function()
      }
 
      // HIển thị chuỗi thời gian trong thẻ p
-     time.textContent =  hours + " : " + minutes + " : " + seconds;
+     time.textContent =  hours + ": " + minutes + ": " + seconds;
 
      // Nếu thời gian kết thúc, hiển thị chuỗi thông báo
      if (distance < 0) {

@@ -26,7 +26,17 @@
         }
     });
 
-
+    // Fixed sales
+    $(function () {
+        var sales = $('.header-inner');
+        $(window).scroll(function () {
+            if (($window).scrollTop() <= 40) {
+                sales.removeClass('navbar-scroll');
+            } else {
+                sales.addClass('.navbar-scroll');
+            }
+        })
+    })
 
     // Back to top button
     $(window).scroll(function () {
